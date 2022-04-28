@@ -3,6 +3,7 @@ plugins {
     id 'eclipse'  // optional, for Eclipse project
     id 'idea'     // optional, for IntelliJ IDEA project
     id 'checkstyle'
+    id 'war'
 }
 configurations {
   checkstyleOverride
@@ -13,6 +14,8 @@ repositories {
 
 dependencies {
     testImplementation('org.junit.jupiter:junit-jupiter:5.5.2')
+    implementation group: 'org.apache.commons', name: 'commons-lang3', version: '3.11'
+    implementation group: 'com.google.guava', name: 'guava', version: '31.1-jre'
 }
 
 test {
